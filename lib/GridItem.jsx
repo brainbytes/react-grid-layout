@@ -309,7 +309,8 @@ var GridItem = React.createClass({
       className: ['react-grid-item', this.props.className, this.state.resizing ? 'resizing' : '',
         this.props.useCSSTransforms ? 'cssTransforms' : ''].join(' '),
       // We can set the width and height on the child, but unfortunately we can't set the position.
-      style: this.createStyle(pos)
+      style: this.createStyle(pos),
+      position: pos,
     });
 
     // Resizable support. This is usually on but the user can toggle it off.
